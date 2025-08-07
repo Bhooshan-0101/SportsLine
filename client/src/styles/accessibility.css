@@ -1,0 +1,52 @@
+/* Modern accessibility styles to replace deprecated -ms-high-contrast */
+
+/* Use forced-colors media query instead of -ms-high-contrast */
+@media (forced-colors: active) {
+  /* Ensure buttons have visible borders in high contrast mode */
+  button, 
+  .MuiButton-root {
+    border: 1px solid transparent;
+  }
+  
+  /* Ensure links are underlined in high contrast mode */
+  a {
+    text-decoration: underline;
+  }
+  
+  /* Ensure focus indicators are visible */
+  *:focus {
+    outline: 2px solid transparent;
+  }
+  
+  /* Ensure form controls have visible borders */
+  input, 
+  select, 
+  textarea,
+  .MuiOutlinedInput-root {
+    border: 1px solid transparent;
+  }
+  
+  /* Ensure icons remain visible */
+  svg {
+    forced-color-adjust: none;
+  }
+}
+
+/* Ensure proper color contrast for text */
+.text-primary,
+.text-yellow,
+.text-gradient {
+  forced-color-adjust: none;
+}
+
+/* Ensure proper contrast for background colors */
+.bg-primary,
+.bg-secondary,
+.bg-gradient,
+.bg-gradient-primary,
+.bg-gradient-secondary,
+.bg-gradient-yellow,
+.bg-gradient-light,
+.bg-gradient-dark {
+  forced-color-adjust: none;
+}

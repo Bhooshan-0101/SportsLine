@@ -1,0 +1,324 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #FFFFFF;
+  color: #000000;
+  /* Modern text rendering */
+  text-rendering: optimizeLegibility;
+  font-feature-settings: "kern" 1;
+  font-kerning: normal;
+}
+
+/* Import accessibility styles */
+@import './styles/accessibility.css';
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  height: 100%;
+}
+
+/* Custom scrollbar - Enhanced version */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F5F5F5;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(45deg, #FDD835, #FFEB3B);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(45deg, #F57F17, #FDD835);
+}
+
+/* Loading animations */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.loading-spinner {
+  animation: spin 1s linear infinite;
+}
+
+/* Utility classes */
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.h-100 {
+  height: 100%;
+}
+
+/* Custom Material-UI overrides */
+.MuiButton-root {
+  text-transform: none !important;
+}
+
+.MuiCard-root {
+  border-radius: 12px !important;
+}
+
+.MuiPaper-root {
+  border-radius: 12px !important;
+}
+
+/* SportsLine Clean Theme Utilities */
+.bg-primary {
+  background: linear-gradient(45deg, #FDD835, #FFEB3B) !important;
+  color: #000000 !important;
+}
+
+.bg-secondary {
+  background: linear-gradient(45deg, #FDD835, #FFEB3B) !important;
+  color: #000000 !important;
+}
+
+.bg-gradient {
+  background: linear-gradient(45deg, #FDD835, #FFEB3B) !important;
+  color: #000000 !important;
+}
+
+.bg-white {
+  background-color: #FFFFFF !important;
+  color: #000000 !important;
+}
+
+.bg-light {
+  background-color: #FFFFFF !important;
+  color: #000000 !important;
+}
+
+.text-primary {
+  color: #FDD835 !important;
+}
+
+.text-yellow {
+  color: #FDD835 !important;
+}
+
+.text-gradient {
+  background: linear-gradient(45deg, #FDD835, #FFEB3B);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+}
+
+.text-white {
+  color: #FFFFFF !important;
+}
+
+.text-black {
+  color: #000000 !important;
+}
+
+.text-gray {
+  color: #424242 !important;
+}
+
+/* Yellow gradient backgrounds */
+.bg-gradient-primary {
+  background: linear-gradient(45deg, #FDD835, #FFEB3B) !important;
+  color: #000000 !important;
+}
+
+.bg-gradient-secondary {
+  background: linear-gradient(45deg, #FDD835, #FFEB3B) !important;
+  color: #000000 !important;
+}
+
+.bg-gradient-yellow {
+  background: linear-gradient(45deg, #FDD835, #FFEB3B) !important;
+  color: #000000 !important;
+}
+
+.bg-gradient-light {
+  background: linear-gradient(45deg, #FFEB3B, #FFF176) !important;
+  color: #000000 !important;
+}
+
+.bg-gradient-dark {
+  background: linear-gradient(45deg, #F57F17, #FDD835) !important;
+  color: #000000 !important;
+}
+
+/* Hover effects */
+.hover-lift {
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-4px);
+  -webkit-transform: translateY(-4px);
+  -moz-transform: translateY(-4px);
+  -o-transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(253, 216, 53, 0.3);
+}
+
+.hover-glow-yellow {
+  transition: box-shadow 0.3s ease;
+}
+
+.hover-glow-yellow:hover {
+  box-shadow: 0 0 20px rgba(253, 216, 53, 0.6);
+}
+
+.hover-glow-primary {
+  transition: box-shadow 0.3s ease;
+}
+
+.hover-glow-primary:hover {
+  box-shadow: 0 0 20px rgba(253, 216, 53, 0.6);
+}
+
+.hover-glow-gradient {
+  transition: box-shadow 0.3s ease;
+}
+
+.hover-glow-gradient:hover {
+  box-shadow: 0 0 25px rgba(253, 216, 53, 0.7);
+}
+
+
+
+/* Responsive utilities */
+@media (max-width: 600px) {
+  .hide-mobile {
+    display: none !important;
+  }
+}
+
+@media (min-width: 601px) {
+  .show-mobile {
+    display: none !important;
+  }
+}
+
+/* React Toastify custom styles and fixes */
+.Toastify__toast-container {
+  z-index: 9999;
+}
+
+
+
+.Toastify__toast--success {
+  background: linear-gradient(45deg, #4CAF50, #66BB6A);
+  color: white;
+}
+
+.Toastify__toast--error {
+  background: linear-gradient(45deg, #F44336, #EF5350);
+  color: white;
+}
+
+.Toastify__toast--warning {
+  background: linear-gradient(45deg, #FDD835, #FFEB3B);
+  color: #000000;
+}
+
+.Toastify__toast--info {
+  background: linear-gradient(45deg, #2196F3, #42A5F5);
+  color: white;
+}
+
+/* Fix for passive event listener warning */
+.Toastify__toast {
+  touch-action: none;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border-radius: 12px;
+  font-family: 'Inter', 'Roboto', 'Helvetica', 'Arial', sans-serif;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.Toastify__close-button {
+  touch-action: manipulation;
+  -webkit-touch-callout: none;
+}
+
+.Toastify__progress-bar {
+  touch-action: none;
+}
+
+/* Prevent drag events that cause passive listener warnings */
+.Toastify__toast-container * {
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  pointer-events: auto;
+}
+
+/* Custom toast classes */
+.toast-success {
+  background: linear-gradient(45deg, #4CAF50, #66BB6A) !important;
+  color: white !important;
+}
+
+.toast-error {
+  background: linear-gradient(45deg, #F44336, #EF5350) !important;
+  color: white !important;
+}
+
+.toast-warning {
+  background: linear-gradient(45deg, #FDD835, #FFEB3B) !important;
+  color: #000000 !important;
+}
+
+.toast-info {
+  background: linear-gradient(45deg, #2196F3, #42A5F5) !important;
+  color: white !important;
+}
